@@ -14,12 +14,12 @@ const wordsNum = 20
 
 func main() {
 	if len(os.Args) < 2 {
-		log.Fatal("filename not provided")
+		log.Fatal("file path not provided")
 	}
 
 	mp, err := getWordsCountsMap(os.Args[1])
 	if err != nil {
-		log.Fatalf("getWordsCountMapFromFile: %s", err)
+		log.Fatalf("getWordsCountsMap: %s", err)
 	}
 
 	counts := getWordsCountsSlice(mp)
